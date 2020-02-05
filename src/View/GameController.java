@@ -4,6 +4,7 @@ package View;
 import PlayGalgeleg.IPlayGalgeleg;
 import galgeleg.JavaStubIncomming;
 
+import javax.imageio.ImageWriter;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
@@ -13,10 +14,13 @@ import java.rmi.RemoteException;
 
 public class GameController {
     IPlayGalgeleg k;
+    IWelcome welcomeMessage  = new Welcome();
 
     Input input;
 
     public GameController() throws Exception {
+        welcomeMessage.welcome();
+
         k = (IPlayGalgeleg) Naming.lookup("rmi://localhost/kontotjeneste");
         k.galgelogik();
         input = new Input();
