@@ -1,10 +1,8 @@
-package brugerautorisation;
+package brugerautorisation.transport.rmi;
 
 import Persistance.IValidate;
 import brugerautorisation.data.Bruger;
-import brugerautorisation.transport.rmi.Brugeradmin;
 
-import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 

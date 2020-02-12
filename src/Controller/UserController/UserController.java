@@ -1,7 +1,7 @@
 package Controller.UserController;
 
 import Persistance.IValidate;
-import brugerautorisation.BrugerOperations;
+import brugerautorisation.transport.rmi.BrugerOperations;
 import brugerautorisation.data.Bruger;
 
 public class UserController {
