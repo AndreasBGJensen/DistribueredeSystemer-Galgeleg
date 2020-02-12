@@ -1,11 +1,12 @@
-package galgeleg;
+package Server;
 
 import PlayGalgeleg.IPlayGalgeleg;
+import Server.Galgelogik;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+
 
 public class JavaSkelImpl extends UnicastRemoteObject implements IPlayGalgeleg {
     Galgelogik logik = null;

@@ -1,4 +1,6 @@
-package galgeleg;
+package Server;
+
+
 
 import PlayGalgeleg.IPlayGalgeleg;
 
@@ -11,7 +13,7 @@ public class ServerMain {
             // Enten: Kør programmet 'rmiregistry' fra mappen med .class-filerne, eller:
             java.rmi.registry.LocateRegistry.createRegistry(1099); // start i server-JVM
 
-            IPlayGalgeleg k = new JavaSkelImpl();
+            IPlayGalgeleg k = new Server.JavaSkelImpl();
             Naming.rebind("rmi://localhost/kontotjeneste", k);
             System.out.println("Kontotjeneste registreret.");
         }

@@ -1,4 +1,6 @@
-package galgeleg;
+package Server;
+
+import Server.Galgelogik;
 
 public class BenytGalgelogik {
 

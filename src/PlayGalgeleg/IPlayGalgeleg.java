@@ -1,6 +1,8 @@
 package PlayGalgeleg;
 
-import galgeleg.Galgelogik;
+
+
+import Server.Galgelogik;
 
 import java.util.ArrayList;
 
@@ -10,8 +12,8 @@ import java.util.ArrayList;
  */
 
 public interface IPlayGalgeleg extends java.rmi.Remote {
-
     public Galgelogik galgelogik() throws java.rmi.RemoteException;
+
     public ArrayList<String> getBrugteBogstaver() throws java.rmi.RemoteException;
     public String getSynligtOrd() throws java.rmi.RemoteException;
     public String getOrdet() throws java.rmi.RemoteException;

@@ -1,4 +1,4 @@
-package galgeleg;
+package Server;
 
 public interface JavaStubIncomming extends java.rmi.Remote  {
 

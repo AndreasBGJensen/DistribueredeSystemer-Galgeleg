@@ -1,4 +1,4 @@
-import View.GameController;
+import Controller.GameController.GameController;
 
 public class Main {
 
