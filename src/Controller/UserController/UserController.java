@@ -6,25 +6,13 @@ import brugerautorisation.data.Bruger;
 
 public class UserController {
 
-IValidate validation;
+    IValidate validation;
 
-
-public UserController(){
-    validation = (IValidate) new BrugerOperations();
-}
-
-
-public boolean validate(String username, String password){
-
-    Bruger bruger = validation.validate(username,password);
-
-    if(bruger!=null){
-        return true;
+    public UserController(){
+        validation = (IValidate) new BrugerOperations();
     }
 
-    return false;
-
-
-}
-
+    public boolean validate(String username, String password) {
+        return validation.validate(username, password);
+    }
 }

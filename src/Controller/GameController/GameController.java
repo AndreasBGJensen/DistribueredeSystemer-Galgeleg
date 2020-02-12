@@ -19,17 +19,33 @@ public class GameController {
     IWelcome welcomeMessage  = new Welcome();
     Input input;
 
+    String userPattern = "s[0-9]{6}";
+
     public GameController() throws Exception {
 
         UserController validation = new UserController();
 
+        //FIXME: Alt nedenstående loging relateret burde ligge en UserController og ikke her.
+        // ALT andet lige burde det slet ikke ligge i Konstruktoren, men i en metode for sig selv.
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Indtast brugernavn og adgangskode. NB: Der skal være enter imellem hver");
-        String username = sc.nextLine();
-        String password = sc.nextLine();
+        System.out.println("For at komme i gang med dette fantastiske spil skal du logge på.\nIndtast brugernavn og tryk \"Enter\".");
+        String userName = sc.nextLine().trim().toLowerCase();
 
-        if(validation.validate(username,password)) {
+        //while (userName.length() != 7 && userName.startsWith("s",0)){
+        while (!userName.matches(userPattern)){
+            System.out.println("Forkert brugernavn er indtastet. (Brugernavns format: \"sXXXXXX\" X = tal mellem 0-9)\nPrøv igen.");
+            userName = sc.nextLine().trim();
+        }
+        System.out.println("Indtast kodeord og tryk \"Enter\".");
+        String password = sc.nextLine().trim();
+        while (password.length() == 0){
+            System.out.println("Intet password er indtastet. Prøv igen.");
+            userName = sc.nextLine().trim();
+        }
+
+        if(validation.validate(userName,password)) {
             welcomeMessage.welcome();
 
             k = (IPlayGalgeleg) Naming.lookup("rmi://localhost/kontotjeneste");
