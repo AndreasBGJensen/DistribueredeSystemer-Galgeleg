@@ -1,6 +1,4 @@
-package Persistance;
-
-import brugerautorisation.data.Bruger;
+package brugerautorisation.Persistance;
 
 public interface IValidate {
     boolean validate(String brugernavn, String kodeord);

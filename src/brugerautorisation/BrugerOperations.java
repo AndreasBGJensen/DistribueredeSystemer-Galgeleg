@@ -1,7 +1,6 @@
 package brugerautorisation;
 
-import Persistance.IValidate;
-import brugerautorisation.data.Bruger;
+import brugerautorisation.Persistance.IValidate;
 import brugerautorisation.transport.rmi.Brugeradmin;
 
 import java.rmi.Naming;

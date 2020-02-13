@@ -1,7 +1,7 @@
 package Controller.GameController;
 
 
-import Persistance.BrugerLogin;
+import brugerautorisation.Persistance.BrugerLogin;
 import PlayGalgeleg.IPlayGalgeleg;
 import View.IWelcome;
 import View.Input;
@@ -37,16 +37,15 @@ public class GameController {
         }
     }
 
-        public void play () throws Exception {
-            input = new Input();
-            while (!k.erSpilletSlut()) {
-                System.out.println(k.getSynligtOrd());
-                input.getIndput();
-                k.gætBogstav(input.getInputLetter());
+    public void play () throws Exception {
+        input = new Input();
+        while (!k.erSpilletSlut()) {
+            System.out.println(k.getSynligtOrd());
+            input.getIndput();
+            k.gætBogstav(input.getInputLetter());
 
-            }
         }
-
     }
+}
 
 

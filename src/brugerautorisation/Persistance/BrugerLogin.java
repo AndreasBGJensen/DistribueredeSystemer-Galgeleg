@@ -1,11 +1,7 @@
-package Persistance;
+package brugerautorisation.Persistance;
 
-import Controller.UserController.UserController;
-import PlayGalgeleg.IPlayGalgeleg;
-import View.Input;
 import brugerautorisation.BrugerOperations;
 
-import java.rmi.Naming;
 import java.util.Scanner;
 
 public class BrugerLogin {
