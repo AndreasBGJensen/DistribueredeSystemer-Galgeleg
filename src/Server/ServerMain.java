@@ -2,7 +2,7 @@ package Server;
 
 
 
-import PlayGalgeleg.IPlayGalgeleg;
+import Controller.GameController.IPlayGalgeleg;
 
 import java.rmi.Naming;
 

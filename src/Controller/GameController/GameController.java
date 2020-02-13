@@ -2,7 +2,6 @@ package Controller.GameController;
 
 
 import brugerautorisation.Persistance.BrugerLogin;
-import PlayGalgeleg.IPlayGalgeleg;
 import View.IWelcome;
 import View.Input;
 import View.Welcome;

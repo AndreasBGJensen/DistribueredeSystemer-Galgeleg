@@ -1,4 +1,4 @@
-package PlayGalgeleg;
+package Controller.GameController;
 
 
 

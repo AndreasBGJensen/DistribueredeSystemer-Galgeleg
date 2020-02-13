@@ -1,7 +1,6 @@
 package Server;
 
-import PlayGalgeleg.IPlayGalgeleg;
-import Server.Galgelogik;
+import Controller.GameController.IPlayGalgeleg;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
