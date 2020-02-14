@@ -44,6 +44,7 @@ public class GameController {
             k.gætBogstav(input.getInputLetter());
 
         }
+        k.galgelogik();
     }
 }
 

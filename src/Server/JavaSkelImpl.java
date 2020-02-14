@@ -16,9 +16,14 @@ public class JavaSkelImpl extends UnicastRemoteObject implements IPlayGalgeleg {
        }
     }
 
+
+/*
+TODO: Quick fix, Skal laves således at der ikke bare retuneres et nyt Galgelogik-objekt
+ */
     @Override
     public Galgelogik galgelogik() throws RemoteException {
         System.out.println("Server: Galgelogik");
+        logik = new Galgelogik();
         return logik;
     }
 
