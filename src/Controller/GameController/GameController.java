@@ -27,7 +27,7 @@ public class GameController {
             if (brugerLogin.login()) {
                 welcomeMessage.welcome();
 
-                k = (IPlayGalgeleg) Naming.lookup("rmi://localhost/kontotjeneste");
+                k = (IPlayGalgeleg) Naming.lookup("rmi://TestAppGalgeleg:10099/kontotjeneste");
                 k.galgelogik();
                 play();
             } else {
